@@ -274,23 +274,59 @@ h2.section-title {
 /* Projects */
 /* Keep previous styles unchanged; add the following: */
 
+.project-card {
+  padding: 32px 36px;
+  background-color: var(--color-background-light);
+  border: 1px solid transparent;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+/* Make the title clickable with a button style */
+.project-toggle {
+  all: unset;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-heading);
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 4px 0;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.project-toggle:hover,
+.project-toggle:focus {
+  color: var(--color-accent);
+  transform: translateX(2px);
+  outline: none;
+}
+
+/* Description block with smooth expand/collapse */
 .project-description {
   font-size: 1rem;
   color: var(--color-text-dark);
   line-height: 1.5;
-  margin-top: 8px;
   font-weight: 500;
   user-select: text;
+  margin-top: 8px;
+
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  padding: 0 0; /* collapsed state */
 }
-.project-card {
-  cursor: default; /* not clickable anymore */
-  padding: 32px 36px;
-  /* other existing styles */
+
+.project-description.active {
+  max-height: 400px; /* adjust based on content */
+  padding: 10px 0;
 }
-/* Remove hover and focus styles for .project-card to avoid pointer cursor and hover effect */
+
+/* Clean up old hover/focus effects on project card */
 .project-card:hover,
 .project-card:focus {
-  box-shadow: var(--shadow-light);
+  box-shadow: none;
   transform: none;
   border-color: transparent;
   outline: none;
