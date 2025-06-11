@@ -430,3 +430,48 @@ footer {
     gap: 28px;
   }
 }
+@media (max-width: 480px) {
+  nav {
+    padding: 16px 0;
+    gap: 14px;
+  }
+
+  ul.nav-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  main {
+    padding: 64px 16px 100px;
+  }
+
+  section {
+    padding: 28px 16px;
+  }
+
+  #home {
+    padding: 64px 16px 64px;
+  }
+
+  #home .profile-photo-home {
+    width: 120px;
+    height: 120px;
+    border-width: 5px;
+  }
+
+  #home h1 {
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  #home .designation-home {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+
+  .projects-list {
+    gap: 24px;
+  }
+}
+
