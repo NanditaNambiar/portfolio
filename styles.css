@@ -347,6 +347,13 @@ footer {
   letter-spacing: 0.02em;
   font-family: 'Poppins', sans-serif;
 }
+footer p {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: #343333;
+  text-align: center;
+}
 
 .footer-links {
   margin-top: 20px;
