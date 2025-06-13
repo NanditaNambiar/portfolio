@@ -134,7 +134,8 @@ section:last-child {
   margin-bottom: 0;
 }
 section:hover {
-  box-shadow: 0 12px 28px rgba(37, 99, 235, 0.15);
+  background-color: #f3f4f6;
+  box-shadow: 0 12px 28px rgba(30, 58, 138, 0.35);
 }
 h2.section-title {
   font-weight: 800;
